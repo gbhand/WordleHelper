@@ -1,1 +1,1 @@
-web: uwsgi --http :8000 --wsgi-file app.py --master --processes 4 --threads 2 --stats 127.0.0.1:6969
+web: python app.py
