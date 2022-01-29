@@ -1,5 +1,6 @@
 # import all the necessary libraries
 import json
+import os
 from turtle import st
 from urllib.request import Request
 from webbrowser import get
@@ -42,7 +43,7 @@ if __name__ == "__main__":
         # Create an app with the configuration specified above
         app = config.make_wsgi_app()
     ip = "0.0.0.0"
-    port = 80
+    port = os.environ.get("PORT")
     print(f"Serving at http://{'localhost' if ip == '0.0.0.0' else ip}:{port}")
     server = make_server(ip, port, app)  # Start the application on port 6543
     server.serve_forever()
