@@ -19,7 +19,7 @@ def is_possible(word: str, incorrect: list, wrong_pos: dict, correct: dict) -> b
         return True
 
 
-def get_possible_words(letters: list[dict]) -> list:
+def get_possible_words(letters: list) -> list:
     results = []
     rows = []
     for i in range(6):
