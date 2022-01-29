@@ -1,7 +1,6 @@
 # import all the necessary libraries
 import json
 import os
-from turtle import st
 from urllib.request import Request
 from webbrowser import get
 from wsgiref.simple_server import make_server
