@@ -1,0 +1,5 @@
+__pycache__
+venv
+.pylintrc
+lint.sh
+.mypy_cache
