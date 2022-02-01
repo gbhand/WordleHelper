@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-from wordle_list import words
+from wordle_list import words_freq
 
 
 def is_possible(word: str, incorrect: list, wrong_pos: dict, correct: dict) -> bool:
@@ -38,7 +38,7 @@ def get_possible_words(letters: list) -> list:
         elif int(letter["state"]) == 1:
             wrong_pos[letter["value"]].append(int(letter["id"]) % 5)
 
-    for word in words:
+    for word in words_freq:
         if is_possible(word, incorrect, wrong_pos, correct):
             results.append(word)
 

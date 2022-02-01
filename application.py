@@ -1,6 +1,5 @@
 # import all the necessary libraries
 import json
-import os
 from urllib.request import Request
 from webbrowser import get
 from wsgiref.simple_server import make_server
@@ -41,9 +40,7 @@ config.add_static_view(name="/", path="./public", cache_max_age=3600)
 
 # Create an app with the configuration specified above
 application = config.make_wsgi_app()
-# ip = "0.0.0.0"
-# port = 8000
-# print(f"Serving at http://{'localhost' if ip == '0.0.0.0' else ip}:{port}")
+
 if __name__ == "__main__":
     # Start the application on port 8000
     server = make_server('', 8000, application)
